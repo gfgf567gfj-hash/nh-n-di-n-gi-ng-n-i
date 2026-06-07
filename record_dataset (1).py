@@ -58,7 +58,7 @@ for cmd in COMMANDS:
         exist_ok=True
     )
 
-print("🎤 THU DATASET LỆNH")
+print(" THU DATASET LỆNH")
 print()
 
 for cmd in COMMANDS:
@@ -71,14 +71,14 @@ for cmd in COMMANDS:
     ])
 
     print("=" * 50)
-    print(f"📢 Lệnh: {LABELS[cmd]}")
-    print(f"📂 Đã có: {existing} file")
-    print(f"🎯 Thu thêm: {SAMPLES} file")
+    print(f" Lệnh: {LABELS[cmd]}")
+    print(f" Đã có: {existing} file")
+    print(f" Thu thêm: {SAMPLES} file")
     print()
     print("d + Enter = xóa file vừa thu")
     print()
 
-    input("▶ Nhấn Enter để bắt đầu...")
+    input(" Nhấn Enter để bắt đầu...")
 
     count = existing
     last_path = None
@@ -104,12 +104,12 @@ for cmd in COMMANDS:
                 last_path = None
 
             else:
-                print("⚠️ Không có file để xóa")
+                print(" Không có file để xóa")
 
             continue
 
         print(
-            f"🔴 Đang ghi âm {DURATION}s..."
+            f" Đang ghi âm {DURATION}s..."
         )
 
         audio = sd.rec(
@@ -131,7 +131,7 @@ for cmd in COMMANDS:
         print(f"   RMS = {rms:.5f}")
 
         if rms < 0.01:
-            print("❌ Tiếng quá nhỏ, thu lại")
+            print(" Tiếng quá nhỏ, thu lại")
             continue
 
         audio_ready = prepare(audio)
@@ -153,11 +153,11 @@ for cmd in COMMANDS:
 
         count += 1
 
-        print("✅ Đã lưu")
+        print("Đã lưu")
 
     print()
     print(f"🎉 Hoàn thành lớp {cmd}")
 
 print()
-print("✅ Đã thu xong")
-print("👉 Chạy train.py để train lại model")
+print(" Đã thu xong")
+print(" Chạy train.py để train lại model")
